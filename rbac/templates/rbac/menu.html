@@ -1,0 +1,19 @@
+<div class="multi-menu">
+
+    {% for item in permission_menu_dict.values %}
+
+       <div class="item">
+        <div class="title"><i class="{{ item.menu_icon }}"></i>{{ item.menu_title }}</div>
+        <div class="body {{ item.class }}">
+              {% for foo in item.children %}
+                  <a href="{{ foo.url }}">{{ foo.title }}</a>
+              {% endfor %}
+
+        </div>
+       </div>
+    {% endfor %}
+
+</div>
+
+
+
